@@ -1,12 +1,11 @@
-document.getElementById('btnCalcular').addEventListener('click', function() {
+// Função que realiza o cálculo
+function calcular() {
     const adultos = parseInt(document.getElementById('adultos').value) || 0;
     const criancas = parseInt(document.getElementById('criancas').value) || 0;
 
-    // consumo
     const totalCarne = (adultos * 0.4) + (criancas * 0.2);
     const totalRefri = (adultos * 1.0) + (criancas * 0.5);
 
-    // produtos
     const custoCarne = totalCarne * 45.00;
     const custoRefri = totalRefri * 8.00;
     const custoTotal = custoCarne + custoRefri;
@@ -18,4 +17,7 @@ document.getElementById('btnCalcular').addEventListener('click', function() {
         <hr>
         <p>💰 <strong>Custo Total:</strong> R$ ${custoTotal.toFixed(2)}</p>
     `;
-});
+}
+
+document.getElementById('adultos').addEventListener('input', calcular);
+document.getElementById('criancas').addEventListener('input', calcular);
