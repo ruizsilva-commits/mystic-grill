@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mystic Grill - Calculadora de Churrasco</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- decoração lateral -->
+  <img src="img/carne.png" alt="Carne" class="img-lateral img-esquerda">
+  <img src="img/refri.png" alt="Refrigerante" class="img-lateral img-direita">
 
-    <header>
-        <h1>Mystic Grill</h1>
-    </header>
-<main>
-  <section>
-    <h2>Calculadora</h2>
+  <header>
+    <h1>Mystic Grill 🍖</h1>
+  </header>
 
-    <div>
-      <label for="adultos">quantidade de adultos:</label>
-      <input type="number" id="adultos" value="0" min="0">
-    </div>
+  <main>
+    <section>
+      <h2>Calculadora de Consumo</h2>
 
-    <div>
-      <label for="criancas">quantidade de crianças:</label>
-      <input type="number" id="criancas" value="0" min="0">
-    </div>
+      <div class="campo">
+        <label for="adultos">👨 Adultos:</label>
+        <input type="number" id="adultos" value="0" min="0">
+      </div>
 
-    <!-- O Botão entra bem aqui! -->
-    <button id="btnCalcular">Calcular Consumo</button>
+      <div class="campo">
+        <label for="criancas">👶 Crianças:</label>
+        <input type="number" id="criancas" value="0" min="0">
+      </div>
 
-    <!-- Um bloco onde o resultado vai aparecer na tela depois do clique -->
-    <div id="resultado"></div>
-  </section>
-</main>
-   <script src="script.js"></script>
+      <button id="btnCalcular">Calcular Consumo</button>
+
+      <div id="resultado"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
-<div class="input-group">
-  <img src="img/carne.png" alt="Carne" class="icon">
-  <label for="adultos">Adultos:</label>
-  <input type="number" id="adultos" value="0" min="0">
-</div>
