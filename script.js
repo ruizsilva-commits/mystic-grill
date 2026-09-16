@@ -10,14 +10,20 @@ function calcular() {
     const custoRefri = totalRefri * 8.00;
     const custoTotal = custoCarne + custoRefri;
 
-    document.getElementById('resultado').innerHTML = `
+    const resultado = document.getElementById('resultado');
+
+    resultado.innerHTML = `
         <h3>Estimativa do Churrasco:</h3>
         <p>🍖 Carne: ${totalCarne.toFixed(2)} kg (R$ ${custoCarne.toFixed(2)})</p>
         <p>🥤 Refrigerante: ${totalRefri.toFixed(2)} L (R$ ${custoRefri.toFixed(2)})</p>
         <hr>
         <p>💰 <strong>Custo Total:</strong> R$ ${custoTotal.toFixed(2)}</p>
     `;
+
+    // Mostra o resultado na tela
+    resultado.style.display = 'block';
 }
 
-document.getElementById('adultos').addEventListener('input', calcular);
-document.getElementById('criancas').addEventListener('input', calcular);
+
+// Botão Calcular Consumo
+document.getElementById('btnCalcular').addEventListener('click', calcular);
